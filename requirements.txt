@@ -9,4 +9,5 @@ pandas
 matplotlib
 seaborn
 pypdf
+python-dotenv
 -e .
