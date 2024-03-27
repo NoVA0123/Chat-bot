@@ -10,7 +10,7 @@ from huggingface_hub import hf_hub_download
 
 def download(model_path_hub, model_basename):
     cur_path = os.getcwd() +'/model'
-    if os.path.exists(model_basename):
+    if os.path.exists(cur_path+model_basename):
         print('model already exists')
         return cur_path
     else:
