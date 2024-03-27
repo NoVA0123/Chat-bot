@@ -11,9 +11,9 @@ import os
 
 
 # Pinecone api key
-
-PineconeApiKey = '74f7589d-ddff-41d3-b65e-e7489ead58fb'
-PineconeApiEnv = 'gcp-starter'
+# uncomment and paste your own api key and environment
+# PineconeApiKey = ''
+# PineconeApiEnv = ''
 
 
 # function to load text
