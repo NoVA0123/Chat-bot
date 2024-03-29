@@ -1,6 +1,7 @@
 from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+import os
 
 
 # pdf loader function
@@ -14,7 +15,7 @@ def LoadPdf(data):
 
 
 # Text splitter
-def TextSplit(extraced_data):
+def TextSplit(extracted_data):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500,
                                                    chunk_overlap=20)
     text_chunks = text_splitter.split_documents(extracted_data)
@@ -23,7 +24,7 @@ def TextSplit(extraced_data):
 
 # Embedding downloader
 def DownloadEmbedding():
-    cur_path = os.getcwd + '/model'
+    cur_path = os.getcwd() + '/model'
     if os.path.exists(cur_path+'/huggingface'):
         print('FIle already exis')
         return cur_path+'/huggingface'

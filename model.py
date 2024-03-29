@@ -96,7 +96,6 @@ llm = CTransformers(model='model/llama-2-7b-chat.ggmlv3.q2_K.bin',
 
 
 # The actual model
-
 QA = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type='stuff',
